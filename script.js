@@ -1,5 +1,6 @@
 const chatWindow = document.getElementById("chat-window");
 const inputField = document.getElementById("input-field");
+const sendButton = document.getElementById("send-button");
 let isExpectingQuestion = true;
 
 const askQuestion = () => {
@@ -32,12 +33,22 @@ const answerQuestion = (question) => {
 
 inputField.focus();
 
-inputField.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && inputField.value !== "") {
+const handleInput = () => {
+  if (inputField.value !== "") {
     if (isExpectingQuestion) {
       askQuestion();
     } else {
       answerQuestion(chatWindow.lastElementChild.querySelector(".question").textContent);
     }
   }
+};
+
+inputField.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    handleInput();
+  }
+});
+
+sendButton.addEventListener("click", () => {
+  handleInput();
 });
