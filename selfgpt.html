@@ -79,6 +79,26 @@
       margin-bottom: 20px;
       font-size: 48px;
     }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 768px) {
+    #chatbox {
+      height: 60vh;
+    }
+    
+    #input-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    #user-input {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
   </style>
 </head>
 <body>
