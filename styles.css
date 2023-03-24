@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 48px;
+  }
+  
+  #chat-window {
+    height: calc(100% - 40px);
+    width: 100vw;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f7f7f7;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .question {
+    font-weight: bold;
+  }
+  
+  .answer {
+    font-style: italic;
+  }
+  
+  #input-field {
+    width: 100vw;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -1px 0 0 #fff inset;
+  }
+  
