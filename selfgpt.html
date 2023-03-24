@@ -96,22 +96,29 @@
     }
 
     /* Media query for smaller screens */
-    @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     #chatbox {
       height: 60vh;
     }
     
     #input-container {
       display: flex;
+      width: 100%;
+      height: 30vh;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     
-    #user-input {
+    #input-field {
       width: 100%;
       margin-right: 0;
       margin-bottom: 10px;
+    }
+
+    #send-button {
+      border-radius: 5px;
+      width: 100%;
     }
   }
   </style>
@@ -119,7 +126,7 @@
 <body>
   <h1>SelfGPT 💬</h1>
   <p id="tagline">Have a chat with the most special intelligence in the universe! 🤗</p>
-  <p id="createdby">Created by Gábor Csontos (2023)</p>
+  <p id="createdby">Created by Gábor Csontos (2023) with some ChatGPT help...</p>
   <div id="chat-window"></div>
   <div id="input-container">
     <textarea id="input-field" placeholder="Type your message..."></textarea>
